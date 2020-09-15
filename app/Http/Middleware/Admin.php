@@ -19,6 +19,6 @@ class Admin
             return $next($request);
         }
 
-        redirect('home')->with('error', 'only admin can access !');
+        return redirect('home')->with('error', 'only admin can access !');
     }
 }
