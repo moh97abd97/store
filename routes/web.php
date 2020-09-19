@@ -20,4 +20,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/admin', 'HomeController@Admin')->name('admin.home')->middleware('admin');
 
 
-Route::resource('admin/user', 'UserController');
+Route::middleware('admin')->group(function () {
+    Route::resource('admin/user', 'UserController');
+    Route::resource('admin/category', 'CategoryController');
+});
