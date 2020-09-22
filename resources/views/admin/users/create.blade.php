@@ -93,8 +93,8 @@
                         @enderror
                       </div>
                       <div class="form-group">
-                        <label for="addreess">Addreds (optional)</label>
-                        <input type="text" class="form-control" name="addreess" id="adreess" placeholder="Enter addreess"  value="{{ old('addres') }}">
+                        <label for="address">Address (optional)</label>
+                        <input type="text" class="form-control" name="address" id="address" placeholder="Enter address"  value="{{ old('addres') }}">
                         @error('address')
                           <span style="color:red">
                             {{ $message }}
@@ -105,7 +105,7 @@
                     <!-- /.card-body -->
     
                     <div class="card-footer">
-                      <button type="submit" class="btn btn-primary">Create User</button>
+                      <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Create User</button>
                     </div>
                   </form>
                 </div>

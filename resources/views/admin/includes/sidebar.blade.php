@@ -54,21 +54,21 @@
           </li>
 
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link active">
+            <a href="" class="nav-link active">
               <p>
-                Users
+                Categories
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link active">
-                  <p>Create User</p>
+                <a href="{{ route('category.index') }}" class="nav-link active">
+                  <p>View Catgories</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
-                  <p>Edit User</p>
+                <a href="{{ route('category.create') }}" class="nav-link">
+                  <p>Create Category</p>
                 </a>
               </li>
             </ul>

@@ -60,9 +60,14 @@
                       <div class="form-group">
                         <label for="parent">Parent</label>
                         <select class="form-control" name="parent_id" id="parent">
-                          <option value="0"></option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
+                          <option value="">Make Super Category</option>
+                          @foreach ($categories as $cat)
+                              @if($cat->id == $category->parent_id)
+                                <option value="{{ $cat->id }}" selected>{{ $cat->name }}</option>
+                              @elseif($cat->id != $category->id)
+                                <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                              @endif
+                          @endforeach
                         </select>
                         @error('parent')
                           <span style="color:red">

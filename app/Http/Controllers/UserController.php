@@ -46,11 +46,9 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
-        $valid['password'] = bcrypt($valid['password']);
-        
-        User::create($valid);
-
-        return view('admin.users.show');
+        $request['password'] = bcrypt($request['password']);
+        $user = User::create($request->all());
+        return view('admin.users.show', ['user' => $user]);
     }
 
     /**
@@ -97,17 +95,14 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
-        $valid['password'] = bcrypt($valid['password']);
-
+        
+        $request['password'] = bcrypt($request['password']);
         $user = User::find($id);
-        $user->username = $valid['username'];
-        $user->fullname = $valid['fullname'];
-        $user->email = $valid['email'];
-        $user->password = $valid['password'];
-        $user->address = $valid['address'];
-        $user->phone = $valid['phone'];
-        $user->save();
-
+        $user->update($request->all());
+        
+        return view('admin.users.index', [
+            'users' => User::all(),
+        ]);
     }
 
     /**

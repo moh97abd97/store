@@ -38,18 +38,34 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        name
+                        Fullname
                     </div>
                     <div class="col-md-4">
-                        {{ $user->name }}
+                        {{ $user->fullname }}
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        email
+                        Email
                     </div>
                     <div class="col-md-4">
                         {{ $user->email }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        phone
+                    </div>
+                    <div class="col-md-4">
+                        {{ $user->phone }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        Address
+                    </div>
+                    <div class="col-md-4">
+                        {{ $user->address }}
                     </div>
                 </div>
                 <div class="row">

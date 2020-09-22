@@ -89,7 +89,7 @@
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
-        <a class="btn btn-success" href="{{ route('category.create') }}"> + Create New Category</a>
+        <a class="btn btn-success" href="{{ route('category.create') }}"> <i class="fa fa-plus "></i> Create New Category</a>
       </section>
       <!-- /.content -->
   </div>

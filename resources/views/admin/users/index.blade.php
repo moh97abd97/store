@@ -107,7 +107,7 @@
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
-        <a class="btn btn-success" href="{{ route('user.create') }}"> + Create New User</a>
+        <a class="btn btn-success" href="{{ route('user.create') }}"> <i class="fa fa-plus "></i> Create New User</a>
       </section>
       <!-- /.content -->
   </div>

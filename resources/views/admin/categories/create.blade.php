@@ -59,9 +59,10 @@
                       <div class="form-group">
                         <label for="parent">Parent</label>
                         <select class="form-control" name="parent_id" id="parent">
-                          <option value="0"></option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
+                          <option value="">Make it Super Category</option>    
+                          @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>    
+                          @endforeach
                         </select>
                         @error('parent')
                           <span style="color:red">
@@ -74,7 +75,7 @@
                     <!-- /.card-body -->
     
                     <div class="card-footer">
-                      <button type="submit" class="btn btn-primary">Create Category</button>
+                      <button type="submit" class="btn btn-primary"><i class="fa fa-plus "></i> Create Category</button>
                     </div>
                   </form>
                 </div>
