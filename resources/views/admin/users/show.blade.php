@@ -1,3 +1,5 @@
+@section('title','View User')
+
 @extends('admin.layouts.app')
 
 @section('content')

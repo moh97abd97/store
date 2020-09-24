@@ -1,3 +1,5 @@
+@section('title','Categories')
+
 @extends('admin.layouts.app')
 
 @section('content')
@@ -95,6 +97,3 @@
   </div>
   <!-- /.content-wrapper -->
 @endsection 
-
-
-

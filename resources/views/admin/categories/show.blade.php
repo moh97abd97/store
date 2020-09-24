@@ -1,3 +1,5 @@
+@section('title','View Category')
+
 @extends('admin.layouts.app')
 
 @section('content')

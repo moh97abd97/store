@@ -1,3 +1,5 @@
+@section('title','Admin Dashboard')
+
 @extends('admin.layouts.app')
 
 @section('content')
@@ -59,7 +61,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{ $count }}</h3>
+                <h3>{{ $usersCount }}</h3>
 
                 <p>User Registrations</p>
               </div>
@@ -74,6 +76,23 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
+                <h3>{{ $productsCount }}</h3>
+
+                <p>Products</p>
+              </div>
+              <div class="icon">
+                <i class="ion pricetags"></i>
+                <ion-icon name="pricetags-outline"></ion-icon>
+              </div>
+              <a href="{{ route('product.index') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+
+          {{-- <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
                 <h3>65</h3>
 
                 <p>Unique Visitors</p>
@@ -84,7 +103,7 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+          <!-- ./col --> --}}
         </div>
         <!-- /.row -->        
       </div><!-- /.container-fluid -->

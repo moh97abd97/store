@@ -73,6 +73,26 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link active">
+              <p>
+                Products
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('product.index') }}" class="nav-link active">
+                  <p>View Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('product.create') }}" class="nav-link">
+                  <p>Create Product</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
